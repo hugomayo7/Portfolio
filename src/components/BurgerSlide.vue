@@ -8,16 +8,16 @@
     <span class="close-btn">x</span>
     <ul class="nav__wrapper">
       <li>
-        <RouterLink to="/home">Accueil</RouterLink>
+        <RouterLink class="elementNav" to="/home">Accueil</RouterLink>
       </li>
       <li>
-        <RouterLink to="/projets">Projets</RouterLink>
+        <RouterLink class="elementNav" to="/projets">Projets</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about">À propos</RouterLink>
+        <RouterLink class="elementNav" to="/about">À propos</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink class="elementNav" to="/contact">Contact</RouterLink>
       </li>
     </ul>
     <div class="social-media">
@@ -55,6 +55,16 @@ export default {
     $(".close-btn").click(function () {
       $(".slide").toggleClass("isOpen");
       $(".darkLayout").toggleClass("displayDarkLayout");
+    });
+
+    $(".darkLayout").click(function () {
+      $(".slide").toggleClass("isOpen");
+      $("#dLayout").toggleClass("displayDarkLayout");
+    });
+
+    $(".elementNav").click(function () {
+      $(".slide").toggleClass("isOpen");
+      $("#dLayout").toggleClass("displayDarkLayout");
     });
   },
 };
@@ -99,6 +109,11 @@ export default {
 .slide.isOpen {
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
+
+  .nav__wrapper li a {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+  }
 }
 
 .slide {
@@ -140,7 +155,11 @@ export default {
         text-decoration: none;
         font-weight: bold;
         font-size: 16px;
-        transition: all ease-in-out 0.4s;
+        transition: transform ease-in-out 2s;
+
+        -webkit-transition: transform 2s ease-in-out;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
       }
 
       a:hover {
@@ -160,7 +179,7 @@ export default {
     display: flex;
     flex-direction: column;
     height: 10%;
-    width: 60%;
+    width: 80%;
     margin-bottom: 4%;
 
     .list__social-media {

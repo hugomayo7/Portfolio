@@ -15,11 +15,11 @@ export default {
 
 <template>
   <header>
-    <div class="navbar">
+    <div class="navbar--main">
       <NavBar />
     </div>
   </header>
-  <div class="darkLayout"></div>
+  <div id="dLayout" class="darkLayout"></div>
   <div class="light x2"></div>
   <div class="light x3"></div>
   <div class="light x4"></div>
@@ -39,6 +39,11 @@ export default {
 @import "@/assets/base.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+*, ::before, ::after {
+  box-sizing: content-box !important;
+}
+
 header {
   font-family: "Roboto", sans-serif;
   z-index: 19;
@@ -51,6 +56,7 @@ html {
 body {
   background: rgb(233, 233, 233);
   height: 100%;
+  transition: all 1s ease-in-out;
 }
 
 #app {

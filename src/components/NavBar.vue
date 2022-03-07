@@ -2,16 +2,6 @@
 import { RouterLink, RouterView } from "vue-router";
 import BurgerSlide from "./BurgerSlide.vue";
 
-// $(window).scroll(function () {
-//   var hauteur = $(window).scrollTop();
-//   console.log(hauteur);
-
-//   if (hauteur > 10) {
-//     let navbar = document.getElementsByClassName("wrapper")[0];
-//     navbar.setAttribute("height", "10vh");
-//   }
-// });
-
 export default {
   components: {
     BurgerSlide,
@@ -22,9 +12,9 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper site-header__wrapper">
+  <div class="wrapperr site-header__wrapper">
     <div class="site-header__logo">
-      <RouterLink class="logo" to="/">MAYONOBE</RouterLink>
+      <RouterLink id="logo" to="/">MAYONOBE</RouterLink>
     </div>
     <div class="site-header__cat">
       <ul class="nav__wrapper">
@@ -41,7 +31,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.wrapper {
+.wrapperr {
   position: fixed;
   display: flex;
   width: 100%;
@@ -56,7 +46,7 @@ export default {
     text-transform: uppercase;
   }
 
-  .logo {
+  #logo {
     font-weight: bold;
     font-size: 22px;
   }

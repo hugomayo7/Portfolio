@@ -14,8 +14,7 @@
       <div class="barre"></div>
       <div class="resume">
         <p>
-          Je suis blablabla.... ihsbcuidsgc bhuienebfzehceuicbejcbehjfbuiz bihr
-          fehzhb zebfze b erybeb
+          Passionné par le <strong>Développement Web</strong>
         </p>
       </div>
     </div>
@@ -33,7 +32,7 @@ main {
   font-family: "Roboto", sans-serif;
   justify-content: space-evenly;
   align-items: center;
-  height: 95%;
+  height: 100%;
   padding-top: 60px;
 
   .my_picture {
@@ -90,7 +89,18 @@ main {
     }
 
     .resume {
-      font-size: 18px;
+      font-size: 24px;
+
+      p {
+        strong {
+          font-weight: bold;
+          text-decoration: underline rgb(0, 190, 0);
+        }
+        strong:hover {
+          text-decoration: underline rgb(221, 0, 184);
+          transition: 0.4s ease-in-out;
+        }
+      }
     }
   }
 }
