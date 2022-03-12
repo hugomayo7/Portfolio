@@ -38,7 +38,7 @@ export default {
   align-items: center;
   height: auto;
   background-color: rgb(255, 255, 255);
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-shadow: 15px 5px 25px rgba(49, 49, 49, 0.616);
   z-index: 10;
 

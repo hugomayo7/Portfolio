@@ -20,22 +20,29 @@ export default {
   },
   setup() {
     class CardProject {
-      constructor(id, title, image, resume, details) {
-        (this.id = id), (this.title = title), (this.image = image), (this.resume = resume), (this.details = details);
+      constructor(id, title, image, resume, details, techno, year) {
+        (this.id = id),
+          (this.title = title),
+          (this.image = image),
+          (this.resume = resume),
+          (this.details = details),
+          (this.techno = techno),
+          (this.year = year);
       }
     }
 
     let data_project = ref([]);
 
     const makeProject = () => {
-
       for (const project of BD) {
         const new_project = new CardProject(
           project.id,
           project.title,
           project.image,
           project.resume,
-          project.details
+          project.details,
+          project.techno,
+          project.year
         );
 
         data_project.value.push(new_project);
@@ -52,13 +59,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 main {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   display: flex;
-  height: auto;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
+  height: 100%;
   .projectsList {
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +77,15 @@ main {
     margin-top: 13vh;
     margin-bottom: 3%;
     padding: 1%;
-    padding-bottom: 2.5%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  main {
+    .projectsList {
+      display: block;
+    }
   }
 }
 </style>

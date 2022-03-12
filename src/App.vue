@@ -39,13 +39,14 @@ export default {
 @import "@/assets/base.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 *, ::before, ::after {
   box-sizing: content-box !important;
 }
 
 header {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   z-index: 19;
 }
 
@@ -54,6 +55,7 @@ html {
 }
 
 body {
+  // background: rgb(88, 88, 88);
   background: rgb(233, 233, 233);
   height: 100%;
   transition: all 1s ease-in-out;
@@ -72,6 +74,12 @@ body {
   height: 100%;
   z-index: 13;
   animation-duration: 2s;
+}
+
+footer {
+  position: absolute;
+  bottom: -1;
+  width: 100%;
 }
 
 .darkLayout.displayDarkLayout {
@@ -94,7 +102,7 @@ body {
   width: 0px;
   opacity: 0.75;
   background-color: rgb(0, 0, 0);
-  box-shadow: #000000 0px 0px 2px 0.5px;
+  box-shadow: #000000 0px 0px 0px 0.5px;
   opacity: 0;
   top: 100vh;
   bottom: 0px;

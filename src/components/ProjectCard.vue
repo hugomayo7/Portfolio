@@ -1,5 +1,8 @@
 <template>
   <div class="card">
+    <div class="year">
+      <p class="year__project">{{ info_project.year }}</p>
+    </div>
     <div :style="changeBackground" class="cardImage" />
     <div class="projet">
       <div class="project--info">
@@ -29,6 +32,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title title_modal">{{ info_project.title }}</h5>
+          <p class="year__project--modal">{{ info_project.year }}</p>
         </div>
         <div class="modal-body content_modal">
           <div class="picture">
@@ -37,7 +41,21 @@
               :alt="'image project' + info_project.id"
             />
           </div>
-          <div v-html="details_prj"></div>
+          <div class="project-global">
+            <div class="project-details">
+              <h5 class="sous-title_modal">Détails :</h5>
+              <hr />
+              <div
+                class="content-details"
+                v-html="markdownToHtml_details"
+              ></div>
+            </div>
+            <div class="project-techno">
+              <h5 class="sous-title_modal">Technologies :</h5>
+              <hr />
+              <div class="content-techno" v-html="markdownToHtml_techno"></div>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button
@@ -54,7 +72,7 @@
 </template>
 
 <script>
-import { marked } from 'marked';
+import { marked } from "marked";
 import { computed } from "vue";
 export default {
   props: {
@@ -73,16 +91,17 @@ export default {
   data() {
     return {
       details_prj: this.info_project.details,
+      techno_prj: this.info_project.techno,
     };
   },
-  methods: {
-    markdownToHtml(text) {
-      return marked(text);
+  computed: {
+    markdownToHtml_details() {
+      return marked(this.details_prj);
+    },
+    markdownToHtml_techno() {
+      return marked(this.techno_prj);
     },
   },
-  mounted() {
-    this.details_prj = this.markdownToHtml(this.details_prj)
-  }
 };
 </script>
 
@@ -95,6 +114,18 @@ export default {
   margin-top: 2%;
   border-radius: 7px;
   box-shadow: 3px 5px 15px 0px #00000054;
+
+  .year {
+    .year__project {
+      position: absolute;
+      background: #fff;
+      right: 10px;
+      padding: 2%;
+      box-shadow: 0px 1px 2px 0px #000000;
+      border-radius: 0 0 5px 5px;
+      font-size: 14px;
+    }
+  }
 
   .cardImage {
     width: 100%;
@@ -140,6 +171,7 @@ export default {
 
 .more-bttn {
   display: inline-block;
+  font-family: "Montserrat", sans-serif;
   padding: 8px;
   border-radius: 15px;
   color: rgb(0, 0, 0);
@@ -179,10 +211,35 @@ export default {
   }
 }
 
+.modal-header {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.616);
+  z-index: 1;
+  background: rgb(39, 39, 39);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  .year__project--modal {
+    margin-right: 2%;
+  }
+}
+
+.modal-footer {
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.616);
+  z-index: 1;
+  background: rgb(39, 39, 39);
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
 .content_modal {
   display: flex;
+  font-family: "Montserrat", sans-serif !important;
   flex-direction: column;
   justify-content: center;
+  background: transparent !important;
+
+  color: rgb(0, 0, 0);
+  z-index: 0;
   .picture {
     display: flex;
     justify-content: center;
@@ -193,8 +250,19 @@ export default {
 
 .title_modal {
   font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0.5% 2%;
+}
+
+.sous-title_modal {
+  font-weight: bold;
   font-size: 19px;
   text-transform: uppercase;
+  margin: 2%;
+  color: #000000;
+
+  font-weight: bold;
 }
 
 img {
@@ -202,5 +270,38 @@ img {
   border-radius: 4px;
   padding: 5px;
   width: 50%;
+}
+
+.project-details,
+.project-techno {
+  margin: 0 5%;
+}
+.project-details {
+  margin-bottom: 4%;
+}
+.content-details,
+.content-techno {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 3%;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 100%;
+    margin-bottom: 5%;
+    .cardImage {
+      height: 100%;
+    }
+
+    .projet {
+      height: 50%;
+    }
+  }
+  .picture {
+    img {
+      width: 50%;
+    }
+  }
 }
 </style>

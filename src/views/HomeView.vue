@@ -8,8 +8,8 @@
     </div>
     <div class="me">
       <div class="my_name">
-        <p class="lastname">MAYONOBE</p>
-        <p class="firstname">Hugo</p>
+        <p class="lastname">Hugo</p>
+        <p class="firstname">MAYONOBE</p>
       </div>
       <div class="barre"></div>
       <div class="resume">
@@ -27,18 +27,20 @@ export default {};
 
 <style scoped lang="scss">
 main {
+  font-family: "Montserrat", sans-serif;
   display: flex;
-  flex-direction: row;
-  font-family: "Roboto", sans-serif;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
-  padding-top: 60px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 75%;
+  padding-top: 25vh;
 
   .my_picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 60%;
     width: 40%;
-    text-align: center;
 
     img {
       width: 70%;
@@ -61,11 +63,11 @@ main {
       padding: 5%;
       box-shadow: 0px 3px 7px rgba(49, 49, 49, 0.616);
       border-radius: 7px;
-      width: 60%;
+      width: 50%;
       background: rgba(226, 226, 226, 0.349);
       backdrop-filter: blur(3px);
-      margin: 5%;
       margin-top: 6%;
+      line-height: 1.2;
 
       .lastname {
         font-weight: bold;
@@ -110,13 +112,15 @@ main {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
-    height: 700px;
+    height: 85%;
     padding-top: 25%;
 
     .me {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 300px;
       transition: 1s ease-in-out;
@@ -136,6 +140,7 @@ main {
         align-items: center;
         width: 80%;
         height: 30%;
+        font-size: 20px;
       }
     }
 
@@ -156,5 +161,8 @@ main {
       font-size: 15px;
     }
   }
+  main .me .resume {
+      font-size: 15px;
+    }
 }
 </style>
