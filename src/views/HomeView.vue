@@ -64,7 +64,7 @@ main {
       box-shadow: 0px 3px 7px rgba(49, 49, 49, 0.616);
       border-radius: 7px;
       width: 50%;
-      background: rgba(226, 226, 226, 0.349);
+      background: rgba(255, 255, 255, 0.747);
       backdrop-filter: blur(3px);
       margin-top: 6%;
       line-height: 1.2;
@@ -82,6 +82,7 @@ main {
     }
 
     .barre {
+      margin-top: 3%;
       width: 33%;
       height: 4px;
       background: rgb(0, 190, 0);
@@ -96,7 +97,7 @@ main {
       p {
         strong {
           font-weight: bold;
-          text-decoration: underline rgb(0, 190, 0);
+          text-decoration: underline rgb(0, 190, 0) 3px;
         }
         strong:hover {
           text-decoration: underline rgb(221, 0, 184);

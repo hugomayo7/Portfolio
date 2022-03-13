@@ -11,48 +11,37 @@
             <a href="mailto:hugomayonobe@gmail.com">hugomayonobe@gmail.com</a>
           </li>
           <li><a href="tel:+33782648734">07 82 64 87 34</a></li>
-          <li class="media">
-            <ul class="list__social-media">
-              <a
-                href="https://www.linkedin.com/in/hugo-mayonobe/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin-in icon"
-              /></a>
-              <a href="https://www.facebook.com/hugo.mayonobe/" target="_blank"
-                ><i class="fa-brands fa-facebook-f icon"
-              /></a>
-              <a href="https://www.instagram.com/hugo_mynb/" target="_blank"
-                ><i class="fa-brands fa-instagram icon"
-              /></a>
-            </ul>
-          </li>
         </ul>
-        <p>Mes Réseaux</p>
+        <div class="media">
+          <ul class="list__social-media">
+            <a href="https://www.linkedin.com/in/hugo-mayonobe/" target="_blank"
+              ><i class="fa-brands fa-linkedin-in icon"
+            /></a>
+            <a href="https://www.facebook.com/hugo.mayonobe/" target="_blank"
+              ><i class="fa-brands fa-facebook-f icon"
+            /></a>
+            <a href="https://www.instagram.com/hugo_mynb/" target="_blank"
+              ><i class="fa-brands fa-instagram icon"
+            /></a>
+          </ul>
+          <p>Mes Réseaux</p>
+        </div>
       </div>
     </div>
     <form class="wrapper__form" ref="form" @submit.prevent="sendEmail">
       <div class="name">
-        <input
-          class="nameInput"
-          type="text"
-          placeholder="NOM"
-          name="user_name"
-        />
+        <input id="nameInput" type="text" placeholder="NOM" name="user_name" />
       </div>
       <div class="mail">
         <input
-          class="mailInput"
+          id="mailInput"
           type="email"
           placeholder="EMAIL"
           name="user_email"
         />
       </div>
       <div class="msg">
-        <textarea
-          class="msgInput"
-          placeholder="MESSAGE"
-          name="message"
-        ></textarea>
+        <textarea id="msgInput" placeholder="MESSAGE" name="message"></textarea>
       </div>
       <input class="buttons" type="submit" value="Envoyer" />
     </form>
@@ -74,7 +63,9 @@ export default {
         )
         .then(
           (result) => {
-            console.log("SUCCESS!", result.text);
+            document.getElementById("nameInput").value = "";
+            document.getElementById("mailInput").value = "";
+            document.getElementById("msgInput").value = "";
           },
           (error) => {
             console.log("FAILED...", error.text);
@@ -114,7 +105,7 @@ main {
         font-weight: bold;
         position: relative;
         color: rgb(0, 190, 0);
-        font-size: 46px;
+        font-size: 62px;
         width: 40%;
         height: 100%;
         padding-top: 15%;
@@ -124,15 +115,15 @@ main {
         text-shadow: 0px 1px 1px rgb(0, 0, 0);
       }
 
-      .app-title:after {
-        content: "";
-        display: block;
-        margin-top: 2%;
-        width: 43px;
-        height: 5px;
-        box-shadow: 0px 0.8px 1px rgb(0, 0, 0);
-        background: rgb(0, 190, 0);
-      }
+      // .app-title:after {
+      //   content: "";
+      //   display: block;
+      //   margin-top: 2%;
+      //   width: 43px;
+      //   height: 5px;
+      //   box-shadow: 0px 0.8px 1px rgb(0, 0, 0);
+      //   background: rgb(0, 190, 0);
+      // }
 
       .contact_info {
         display: flex;
@@ -148,7 +139,7 @@ main {
 
         p {
           text-align: center;
-          font-size: 9px;
+          font-size: 10px;
           text-transform: uppercase;
         }
 
@@ -156,36 +147,37 @@ main {
           line-height: 2;
           text-transform: uppercase;
           text-align: center;
-          font-size: 13px;
+          font-size: 15px;
+        }
+      }
+      .media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        width: 100%;
 
-          .media {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10%;
+        .list__social-media {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 90%;
+          height: 65%;
+          margin-bottom: 1%;
+
+          a {
+            color: #111;
+            width: 30%;
+            height: 50%;
+            text-align: center;
+            padding-top: 2%;
           }
 
-          .list__social-media {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            height: 65%;
-            margin-bottom: 1%;
-
-            a {
-              color: #111;
-              width: 30%;
-              height: 50%;
-              text-align: center;
-              padding-top: 2%;
-            }
-
-            a:hover {
-              color: rgb(0, 190, 0);
-              transition: all ease-in-out 0.3s;
-            }
+          a:hover {
+            color: rgb(0, 190, 0);
+            transition: all ease-in-out 0.3s;
           }
         }
       }
@@ -202,7 +194,7 @@ main {
 
       .name {
         width: 90%;
-        .nameInput {
+        #nameInput {
           width: 100%;
           padding: 10px 0;
           background: none;
@@ -216,9 +208,9 @@ main {
       }
       .msg {
         width: 90%;
-        .msgInput {
+        #msgInput {
           width: 100%;
-          height: 100px;
+          height: 170px;
           padding: 10px 0;
           background: none;
           border: none;
@@ -232,7 +224,7 @@ main {
       }
       .mail {
         width: 90%;
-        .mailInput {
+        #mailInput {
           width: 100%;
           padding: 10px 0;
           background: none;
@@ -262,6 +254,47 @@ main {
     }
     ::placeholder {
       font-family: "Montserrat", sans-serif;
+    }
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  main {
+    .formulaire {
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3vh;
+      .left_part {
+        margin-bottom: 4%;
+        .app-title {
+          display: none;
+          height: 0;
+        }
+        .contact_info {
+        }
+        .media {
+        }
+      }
+      .wrapper__form {
+        margin-top: 6%;
+        margin-bottom: 8%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .contact_info {
+    a {
+      text-decoration: none;
+      color: #111;
+      font-size: 15px;
     }
   }
 }
