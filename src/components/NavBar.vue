@@ -101,7 +101,7 @@ export default {
 }
 
 .router-link-exact-active {
-  border-bottom: 3px solid rgb(0, 190, 0);
+  border-bottom: 4px solid rgb(0, 190, 0);
   transition: 0.2s ease-in-out;
 }
 

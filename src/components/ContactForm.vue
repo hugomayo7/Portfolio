@@ -266,7 +266,7 @@ main {
       height: auto;
       align-items: center;
       justify-content: center;
-      margin-top: 3vh;
+      margin-top: 6vh;
       .left_part {
         margin-bottom: 4%;
         .app-title {

@@ -34,9 +34,12 @@
         </li>
       </ul>
     </div>
-    <div class="download-cv">
-        <!-- TODO -->
-    </div>
+  </div>
+  <div class="download-cv">
+    <h2>Telecharger mon CV</h2>
+    <a href="./src/static/CV_MAYONOBE_Hugo.pdf" download="CV_MAYONOBE_Hugo.pdf">
+      <button class="dw-button">Download</button>
+    </a>
   </div>
 </template>
 
@@ -102,6 +105,43 @@ export default {};
       li:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+.download-cv {
+  height: auto;
+  width: 100%;
+  background-color: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3%;
+  padding-bottom: 5%;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 1.5%;
+    text-transform: uppercase;
+  }
+  a {
+    border: 3px solid #fff;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    .dw-button {
+      color: rgb(0, 190, 0);
+      background: transparent;
+      padding: 10%;
+      width: 100%;
+      border: solid 3px #111;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .dw-button:hover {
+      color: #fff;
+      background: #101010;
+      text-shadow: 0px 3px 1px rgb(0, 0, 0);
+      transition: 0.2s ease-in-out;
     }
   }
 }
@@ -190,6 +230,21 @@ export default {};
         }
         li:hover:after {
           background-color: rgb(0, 190, 0);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container-time {
+    padding-bottom: 5%;
+    .timeline {
+      ul {
+        margin-top: 18%;
+        li {
+          margin-right: 4%;
+          margin-left: 4%;
         }
       }
     }
