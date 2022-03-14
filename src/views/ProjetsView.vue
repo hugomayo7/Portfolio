@@ -47,7 +47,6 @@ export default {
 
         data_project.value.push(new_project);
       }
-      console.log(data_project.value);
     };
 
     onMounted(makeProject);

@@ -2,7 +2,7 @@ const info = [
     {
         id: 1,
         title: 'Portfolio',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png',
+        image: './src/static/img/portfolio.png',
         resume: 'Création de mon site portfolio',
         details: `Mon tout premier projet à été de réaliser mon site portfolio à l'aide du framework VueJS. <br><br>
         La création de ce site m'a permit de découvrir le framework VueJS que je n'avais jamais utilisé auparavant (gestion des Composants, etc), tout en réalisant mon propre site portfolio où j'ai

@@ -7,8 +7,7 @@
             <h2 class="date">2019-2020</h2>
             <h1>Bac Technologique STI2D - Option SIN</h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              consequatur, consectetur quo molestiae similique.
+              Année de terminale, avec option Système d'Information et Numérique. <br> Découverte et légère initiation au HTML/CSS.
             </p>
           </div>
         </li>
@@ -17,8 +16,9 @@
             <h2 class="date">2020-2021</h2>
             <h1>DUT Informatique - 1ere Année</h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              consequatur, consectetur quo molestiae similique.
+              - Algorithmique avancée <br>
+              - Programmation <strong>C++</strong> <br>
+              - Apprentissage <strong>HTML/CSS</strong> (Flex, ...)<br>
             </p>
           </div>
         </li>
@@ -27,8 +27,11 @@
             <h2 class="date">2021-2022</h2>
             <h1>DUT Informatique - 2e Année</h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              consequatur, consectetur quo molestiae similique.
+              - <strong>PHP</strong> <br>
+              - Découverte du framework <strong>Symfony</strong><br>
+              - Découverte du framework <strong>ReactJS</strong><br>
+              - <strong>HTML/CSS</strong><br>
+              - <strong>Javascript</strong>
             </p>
           </div>
         </li>
@@ -54,6 +57,10 @@ export default {};
   box-sizing: border-box !important;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+}
+
+strong {
+  color: rgb(0, 190, 0);
 }
 
 .container-time {
@@ -141,7 +148,7 @@ export default {};
       color: #fff;
       background: #101010;
       text-shadow: 0px 3px 1px rgb(0, 0, 0);
-      transition: 0.2s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
   }
 }
