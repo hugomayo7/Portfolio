@@ -40,7 +40,7 @@
   </div>
   <div class="download-cv">
     <h2>Telecharger mon CV</h2>
-    <a href="./src/static/CV_MAYONOBE_Hugo.pdf" download="CV_MAYONOBE_Hugo.pdf">
+    <a href="./public/static/CV_MAYONOBE_Hugo.pdf" download="CV_MAYONOBE_Hugo.pdf">
       <button class="dw-button">Download</button>
     </a>
   </div>
