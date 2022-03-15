@@ -40,7 +40,7 @@
   </div>
   <div class="download-cv">
     <h2>Telecharger mon CV</h2>
-    <a href="./static/CV_MAYONOBE_Hugo.pdf" download="CV_MAYONOBE_Hugo.pdf">
+    <a href="./CV_MAYONOBE_Hugo.pdf" download="CV_MAYONOBE_Hugo.pdf">
       <button class="dw-button">Download</button>
     </a>
   </div>
@@ -177,7 +177,7 @@ strong {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
   .container-time {
     .timeline::before {
       content: "";

@@ -2,7 +2,7 @@ const info = [
     {
         id: 1,
         title: 'Mortarman',
-        image: './static/img/mortarman.png',
+        image: './img/mortarman.png',
         resume: 'Développement d\'un jeu rétro',
         details: `L'objectif de ce projet à été de réaliser un jeu rétro, par groupe de 4 étudiants, dans le cadre de notre projet de 1ère année de DUT Informatique.<br><br>
         Dans un premier temps, nous avons dû faire de la conception (diagrammes de classes, ...) pour que la programmation se déroule correctement et plus rapidement.<br>
@@ -16,7 +16,7 @@ const info = [
     {
         id: 2,
         title: 'Portfolio',
-        image: './static/img/portfolio.png',
+        image: './img/portfolio.png',
         resume: 'Création de mon site portfolio',
         details: `L'objectif de ce projet à été de réaliser mon site portfolio à l'aide du framework VueJS, pour y répertorier tous mes projets et futur projets. <br><br>
         La création de ce site m'a permis de découvrir le framework VueJS que je n'avais jamais utilisé auparavant (gestion des Composants, etc), tout en réalisant mon propre site portfolio où j'ai
