@@ -132,7 +132,7 @@ export default {
     height: 70%;
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0px -10px 20px 0px #000000;
+    box-shadow: inset 0px -2px 5px 0px #000000;
     border-radius: 7px 7px 0 0;
   }
 
