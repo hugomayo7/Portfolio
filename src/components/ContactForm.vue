@@ -280,6 +280,18 @@ main {
         display: flex;
         flex-direction: column;
         padding: 0;
+        .name {
+          width: 100%;
+        }
+        .mail {
+          width: 100%;
+        }
+        .msg {
+          width: 100%;
+          #msgInput {
+            height: 100px;
+          }
+        }
       }
     }
   }

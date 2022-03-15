@@ -8,7 +8,7 @@ const info = [
         Dans un premier temps, nous avons dû faire de la conception (diagrammes de classes, ...) pour que la programmation se déroule correctement et plus rapidement.<br>
         Ensuite, tout le jeu à été développé en C++ qui est un langage de programmation orientée objet, c'est le langage que nous avions appris durant l'année.<br> 
         Chaque tâches était donc réparti entre les membres de l'équipe pour pouvoir avancer au mieux<br><br>
-        En conclusion<br><br>
+        En conclusion, ce projet nous a permis d'apprendre à travailler en équipe, notamment sur la communication au sein d'un groupe et le suivie d'un projet.<br><br>
         Vidéo de démo : <a target="_blank" href="https://www.youtube.com/watch?v=3ETm-zUKb0I">https://www.youtube.com/watch?v=3ETm-zUKb0I</a>`,
         techno: `<li>C++</li>`,
         year: '2021'

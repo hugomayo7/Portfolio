@@ -18,7 +18,7 @@ export default {
     </div>
     <div class="site-header__cat">
       <ul class="nav__wrapper">
-        <RouterLink class="homePage" to="/home">Accueil</RouterLink>
+        <RouterLink class="homePage" to="/">Accueil</RouterLink>
         <RouterLink class="projectsPage" to="/projets">Projets</RouterLink>
         <RouterLink class="aboutPage" to="/about">À propos</RouterLink>
         <RouterLink class="contactPage" to="/contact">Contact</RouterLink>

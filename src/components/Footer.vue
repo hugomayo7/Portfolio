@@ -2,7 +2,7 @@
   <div class="wrapper site-footer__wrapper">
     <ul class="pages">
       <li>
-        <RouterLink to="/home">Accueil</RouterLink>
+        <RouterLink to="/">Accueil</RouterLink>
       </li>
       <li>
         <RouterLink to="/projets">Projets</RouterLink>

@@ -8,7 +8,7 @@
     <span class="close-btn">x</span>
     <ul class="nav__wrapper">
       <li>
-        <RouterLink class="elementNav" to="/home">Accueil</RouterLink>
+        <RouterLink class="elementNav" to="/">Accueil</RouterLink>
       </li>
       <li>
         <RouterLink class="elementNav" to="/projets">Projets</RouterLink>
