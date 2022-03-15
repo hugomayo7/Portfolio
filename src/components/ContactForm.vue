@@ -273,10 +273,6 @@ main {
           display: none;
           height: 0;
         }
-        .contact_info {
-        }
-        .media {
-        }
       }
       .wrapper__form {
         margin-top: 6%;
