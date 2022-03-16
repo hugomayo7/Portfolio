@@ -30,10 +30,17 @@
     </div>
     <form class="wrapper__form" ref="form" @submit.prevent="sendEmail">
       <div class="name">
-        <input id="nameInput" type="text" placeholder="NOM" name="user_name" />
+        <input
+          required
+          id="nameInput"
+          type="text"
+          placeholder="NOM"
+          name="user_name"
+        />
       </div>
       <div class="mail">
         <input
+          required
           id="mailInput"
           type="email"
           placeholder="EMAIL"
@@ -43,7 +50,7 @@
       <div class="msg">
         <textarea id="msgInput" placeholder="MESSAGE" name="message"></textarea>
       </div>
-      <input class="buttons" type="submit" value="Envoyer" />
+      <input required class="buttons" type="submit" value="Envoyer" />
     </form>
   </div>
 </template>
