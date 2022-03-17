@@ -4,7 +4,7 @@ const info = [
         title: 'Mortarman',
         image: './img/mortarman.png',
         resume: 'Développement d\'un jeu rétro',
-        details: `L'objectif de ce projet à été de réaliser un jeu rétro, par groupe de 4 étudiants, dans le cadre de notre projet de 1ère année de DUT Informatique.<br><br>
+        details: `L'objectif de ce projet à été de réaliser un jeu rétro, par groupes de 4 étudiants, dans le cadre de notre projet de 1ère année de DUT Informatique.<br><br>
         Notre idée était de reprendre le jeu "Bomberman". Dans un premier temps, nous avons dû faire de la conception (diagrammes de classes, ...) pour que la programmation se déroule correctement et plus rapidement.<br>
         Ensuite, tout le jeu a été développé en C++ qui est un langage de programmation orientée objet, c'est le langage que nous avions apprit durant l'année.<br> 
         Chaque tâche était donc répartie entre les membres de l'équipe pour pouvoir avancer au mieux<br><br>
