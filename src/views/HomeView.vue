@@ -8,8 +8,8 @@
     </div>
     <div class="me">
       <div class="my_name">
-        <p class="lastname">Hugo</p>
-        <p class="firstname">MAYONOBE</p>
+        <p class="lastname"><strong>Hugo</strong></p>
+        <p class="firstname"><strong>MAYONOBE</strong></p>
       </div>
       <div class="barre"></div>
       <div class="resume">

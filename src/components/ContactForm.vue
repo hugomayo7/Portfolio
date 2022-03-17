@@ -48,9 +48,9 @@
         />
       </div>
       <div class="msg">
-        <textarea id="msgInput" placeholder="MESSAGE" name="message"></textarea>
+        <textarea required id="msgInput" placeholder="MESSAGE" name="message"></textarea>
       </div>
-      <input required class="buttons" type="submit" value="Envoyer" />
+      <input  class="buttons" type="submit" value="Envoyer" />
     </form>
   </div>
 </template>
