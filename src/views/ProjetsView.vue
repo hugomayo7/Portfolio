@@ -82,6 +82,7 @@ main {
 
 @media screen and (max-width: 900px) {
   main {
+    height: auto;
     .projectsList {
       display: block;
     }

@@ -28,6 +28,24 @@ const info = [
         techno: `<li>VueJS</li><li>HTML</li><li>SCSS</li><li>Bash/Nginx</li>`,
         year: '2022'
     },
+    {
+        id: 3,
+        title: 'Casse-Brique',
+        image: '',
+        resume: 'Développement d\'un Casse-Brique en JS',
+        details: ``,
+        techno: `<li>Javascript</li><li>HTML</li><li>CSS</li>`,
+        year: '2022'
+    },
+    {
+        id: 4,
+        title: 'Musée Maritime',
+        image: '',
+        resume: 'Application Web mobile',
+        details: ``,
+        techno: `<li>ReactJS</li><li>Symfony</li><li>API-Platform</li><li>HTML</li><li>CSS</li>`,
+        year: '2022'
+    },
 ]
 
 export default info;
