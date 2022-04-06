@@ -237,6 +237,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   background: transparent !important;
+  height: 100%;
 
   color: rgb(0, 0, 0);
   z-index: 0;
@@ -244,7 +245,12 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 4%;
-    width: 100%;
+    width: auto;
+    height: 150%;
+    * {
+      width: auto;
+      height: 245px;
+    }
   }
 }
 
@@ -299,9 +305,8 @@ img {
     }
   }
   .picture {
-    img {
-      width: 50%;
-    }
+    height: auto;
+    width: auto;
   }
 }
 </style>

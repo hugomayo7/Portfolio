@@ -39,9 +39,9 @@
     </div>
   </div>
   <div class="download-cv">
-    <h2>Telecharger mon CV</h2>
+    <h2>Consulter mon CV</h2>
     <a href="./CV_MAYONOBE_Hugo.pdf" target="_blank">
-      <button class="dw-button">Télécharger</button>
+      <button class="dw-button">CONSULTER</button>
     </a>
   </div>
 </template>
